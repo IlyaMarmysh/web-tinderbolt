@@ -135,8 +135,8 @@ class MyTelegramBot extends HtmlTelegramBot {
     }
 }
 
-const chatgpt = new ChatGptService("gpt:h4CQINi3RUNETJprJI4HJFkblB3TYAWTNapKtwbtLBVoSgEz")
-const bot = new MyTelegramBot("6702043005:AAERdHw5foeBKuBxFoclc73mtvBqD2tWGtU");
+const chatgpt = new ChatGptService("")
+const bot = new MyTelegramBot("");
 
 bot.onCommand(/\/start/ , bot.start)
 bot.onCommand(/\/date/ , bot.date)
