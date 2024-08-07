@@ -94,9 +94,10 @@ class MyTelegramBot extends HtmlTelegramBot {
         const myMessage = await this.sendText("ChatGPT думает над вариантами ответа...")
         const answer = await chatgpt.sendQuestion(prompt, userChatHistory)
         await this.editText(myMessage, answer)
-        await this.sendTextButtons("Очистить историю сообщений?",{
+        if (query === "message_next")
+            await this.sendTextButtons("Очистить историю сообщений?",{
             "clear_message":"Да, очистить.",
-        })
+            })
     }
     async clear(){
         console.log(this.list)
